@@ -86,3 +86,41 @@ textarea {
 }
 .expanding { transform: scale(1.6); box-shadow: 0 0 80px rgba(177, 156, 217, 0.5); border-color: var(--mint-dark) !important; }
 .lang-btn { background: var(--mint-dark); color: var(--dark-mint); border: none; padding: 12px 25px; border-radius: 20px; font-weight: 800; cursor: pointer; }
+/* أكواد التجاوب مع الجوال والآيباد */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* يجعل اللوجو فوق الأزرار */
+        padding: 15px 2%;
+        height: auto;
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* يجعل الأزرار تنزل تحت بعضها إذا لم تكفِ الشاشة */
+        justify-content: center;
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        font-size: 0.9rem; /* تصغير الخط قليلاً ليناسب الجوال */
+    }
+
+    .page {
+        padding: 220px 5% 50px; /* زيادة المسافة العلوية لكي لا يغطي الهيدر المحتوى */
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* جعل الكروت تظهر واحداً تلو الآخر عمودياً */
+    }
+
+    .wide, .tall {
+        grid-column: span 1; /* إلغاء العرض المزدوج في الجوال لكي لا تخرج عن الشاشة */
+        grid-row: span 1;
+    }
+
+    .real-cloud-shape {
+        width: 95%; /* تصغير غيمة البوح لتناسب عرض الجوال */
+        height: 250px;
+    }
+}
